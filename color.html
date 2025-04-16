@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            //font to red
+            document.querySelector("#red").onclick = function () {
+                document.querySelector("#hello").style.color = "red"
+            }
+
+            //font to green
+            document.querySelector("#green").onclick = function () {
+                document.querySelector("#hello").style.color = "green"
+            }
+
+            //font to blue
+            document.querySelector("#blue").onclick = function () {
+                document.querySelector("#hello").style.color = "blue"
+            }
+
+            //formulaire
+            document.querySelector("form").onsubmit = function (e) {
+                e.preventDefault()
+                const name = document.querySelector("#name").value
+                document.querySelector("h2").innerHTML = `Fuck You ${name}`
+            }
+        })
+
+    </script>
+</head>
+
+<body>
+    <h1 id="hello">Hello!</h1>
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+    <button id="blue">Blue</button>
+    <form>
+        <label for="name" style="font-size: 2rem;">What's your name ?</label>
+        <input type="text" id="name">
+        <input type="submit" id="ok">
+    </form>
+    <h2 style="text-align: center;
+    font-size: 10rem;"></h2>
+</body>
+
+</html>
